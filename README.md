@@ -3,8 +3,7 @@
 just run HrProApplication .main() and the server will start on 8080,the database is embedded with H2 Database,so all you need to do is lanch the program .
 
 
-<img width="577" alt="image" src="https://user-images.githubusercontent.com/33018714/205486552-79eb4528-5e6b-4d7b-b6e8-71c20fb756ac.png">
-
+<img width="584" alt="image" src="https://user-images.githubusercontent.com/33018714/205486601-3f0d8034-dd23-4cbb-86c3-6ca66dfadda9.png">
 
 if you need to look the database,the url is http://localhost:8080/h2
 
