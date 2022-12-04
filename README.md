@@ -7,6 +7,12 @@ just run HrProApplication .main() and the server will start on 8080,the database
 
 if you need to look the database,the url is http://localhost:8080/h2
 
+
+some initial  data are already available
+
+<img width="497" alt="image" src="https://user-images.githubusercontent.com/33018714/205486848-94cb4ae2-6824-4320-bb28-f9c6bcfeb52c.png">
+
+
 in order to test the program,some postman sample and csv file were provided . first need to upload hrTest.postman_collection.json into postman
 <img width="1221" alt="image" src="https://user-images.githubusercontent.com/33018714/205485804-43f3bf62-1db2-461b-85d0-6ee16f77c666.png">
 
