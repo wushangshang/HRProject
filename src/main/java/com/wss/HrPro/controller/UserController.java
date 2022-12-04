@@ -142,6 +142,7 @@ public class UserController {
         List<AccountUserVo> voList = new ArrayList<>();
         try {
             for (CSVRecord record : ll) {
+                //support two date format input ,but when upload to database,it will store into yyyy-MM-dd
                 voList.add(AccountUserVo.parse(record));
             }
         } catch (RuntimeException e) {

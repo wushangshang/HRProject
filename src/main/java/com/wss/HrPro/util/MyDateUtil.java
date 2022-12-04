@@ -6,6 +6,7 @@ import cn.hutool.core.date.DateUtil;
 import com.wss.HrPro.entity.po.AccountUser;
 import com.wss.HrPro.util.constans.MesgConst;
 
+import java.util.regex.Pattern;
 
 
 public class MyDateUtil {
@@ -26,7 +27,8 @@ public class MyDateUtil {
     public static void validateDate(AccountUser user) {
         String date = user.getStartDate();
         try {
-            if (date.length() == 9) {
+            Pattern p = Pattern.compile("[a-zA-Z]");
+            if(p.matcher(date).find()) {
                 DateTime parse = DateUtil.parse(date, "dd-MMM-yy");
                 user.setStartDate(DateUtil.format(parse, DatePattern.NORM_DATE_PATTERN));
             } else {
@@ -38,7 +40,9 @@ public class MyDateUtil {
         }
     }
     public static void main(String[] args) {
-        System.out.println(formatDate(""));
+        AccountUser user=new AccountUser();
+        user.setStartDate("7-Nov-01");
+        validateDate(user);
         int kk=0;
     }
 
