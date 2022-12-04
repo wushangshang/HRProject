@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wss.HrPro.mapper.AccountUserMapper">
+
+
+
+    <select id="getUsersWithSameLogin" resultType="com.wss.HrPro.entity.po.AccountUser">
+        SELECT id,login from `account_user`
+        where login in
+        <foreach collection="accountUsers" item="user" index="index"
+                 open="(" close=")" separator=",">
+            #{user.login}
+        </foreach>
+    </select>
+
+    <select id="getUserWithSameLogin" resultType="com.wss.HrPro.entity.po.AccountUser">
+        SELECT id,login from `account_user`
+        where login= #{acc.login}
+    </select>
+    <select id="getUserWithSameID" resultType="com.wss.HrPro.entity.po.AccountUser">
+        SELECT id,login from `account_user`
+        where id= #{acc.id}
+    </select>
+
+    <select id="getUsersWithSameId" resultType="com.wss.HrPro.entity.po.AccountUser">
+        SELECT id,login from `account_user`
+        where id in
+        <foreach collection="accountUsers" item="user" index="index"
+                 open="(" close=")" separator=",">
+            #{user.id}
+        </foreach>
+    </select>
+
+
+
+</mapper>

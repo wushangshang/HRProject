@@ -1,12 +1,9 @@
 package com.wss.HrPro.entity.vo;
 
-import com.wss.HrPro.util.constans.HttpStatus;
 
 import java.util.HashMap;
 
-/**
- * 操作消息提醒
- */
+
 public class AjaxResult extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;
 
@@ -31,15 +28,6 @@ public class AjaxResult extends HashMap<String, Object> {
 
 
 
-
-
-    /**
-     * 方便链式调用
-     *
-     * @param key 键
-     * @param value 值
-     * @return 数据对象
-     */
     @Override
     public AjaxResult put(String key, Object value)
     {

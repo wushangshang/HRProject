@@ -154,13 +154,7 @@ public class CsvImportUtil {
         return records;
     }
 
-    /**
-     * 读取CSV文件，默认跳过文件头
-     * @param csvFile    CSV文件
-     * @param fileHeader  CSV文件头
-     * @return			CSV记录链表
-     * @throws IOException
-     */
+
     public static List<CSVRecord> read(final String csvFile, final String[] fileHeader)
             throws IOException{
         return read(csvFile, fileHeader, true);

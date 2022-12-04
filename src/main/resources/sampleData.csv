@@ -1,0 +1,10 @@
+id,login,name,salary,startDate 
+e0001,hpotter,Harry Potter,1234.00,16-Nov-01
+e0002,rwesley2,Ron Weasley,19234.50,2001-11-16
+e0003,ssnape2,Severus Snape,4000.0,2001-11-16
+e00013,rhagrid2,Rubeus Hagrid,3999.999,16-Nov-01
+e0005,voldemort2,Lord Voldemort,523.4,17-Nov-01
+#e0006,,Ginny ,-2,18-Nov-01
+e0007,hgranger2,Hermione Granger,0.0,2001-11-18
+e0008,gwesley,Albus Dumbledore,34.23,2001-11-19
+e0009,hpotter3,Hermione Granger,0.0,2001-11-18
