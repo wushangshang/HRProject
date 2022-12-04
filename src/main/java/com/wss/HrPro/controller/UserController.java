@@ -64,6 +64,9 @@ public class UserController {
             } else if (pStart + plimit <= list.size()) {
                 list = list.subList(pStart, pStart + plimit);
             } else {
+                if (pStart>list.size()){
+                    return ResponseEntity.status(200).body(AjaxResult.success(new ArrayList<AccountUser>()));
+                }
                 list = list.subList(pStart, list.size());
             }
             return ResponseEntity.status(200).body(AjaxResult.success(list));
