@@ -16,7 +16,7 @@ INSERT INTO `account_user` (id,login,name,salary,start_date ) VALUES
 ('e0002','rwesley','Ron Weasley',19234.50,'2001-11-16'),
 ('e0003','ssnape','everus Snap',4000.0,'2001-11-16'),
 ('e0004','rhagrid','Rubeus Hagr',3999.999,'2001-11-16'),
-('e0005','voldemo','t,Lord Vold',523.4,'2001-11-17'),
+('e0005','voldemo','Lord Vold',523.4,'2001-11-17'),
 ('e0006','gwesley','Ginny Weasl',4000.004,'2001-11-20'),
 ('e0007','hgrange','Hermione Granger',0.0,'2001-11-18'),
 ('e0008','rwesley1','Ron Weasley',19234.50,'2001-6-16'),
