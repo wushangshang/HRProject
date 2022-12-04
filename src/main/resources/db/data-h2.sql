@@ -1,11 +1,3 @@
---DELETE FROM user_account;
---
---INSERT INTO "user_account" (id,login, name, salary, start_date) VALUES
---('e0003','ssnape','Severus Snape',4000.0,'2001-11-16'),
---('e0004','rhagri','Rubeus Hagrid',3999.999,'16-Nov-01'),
---('e0005','voldem','Lord Voldemort',523.4,'17-Nov-01'),
---('e0006','gwesle','Ginny Weasley',4000.004,'18-Nov-01')
-
 
 DELETE FROM `account_user`;
 
