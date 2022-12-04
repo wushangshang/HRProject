@@ -11,4 +11,5 @@ public class Query {
     private String maxSalary;
 
     private String sorting;
+    private String desc;
 }

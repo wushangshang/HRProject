@@ -39,7 +39,9 @@ public class UserController {
                                           @RequestParam(value = "maxSalary", required = false) String maxSalary,
                                           @RequestParam(value = "offset", required = false) String offset,
                                           @RequestParam(value = "limit", required = false) String limit,
-                                          @RequestParam(value = "sorting", required = false) String sorting) {
+                                          @RequestParam(value = "sorting", required = false) String sorting,
+                                          @RequestParam(value = "desc", required = false) String desc
+    ) {
         try {
             int pStart = 0;
             int plimit = 0;
@@ -53,6 +55,7 @@ public class UserController {
             Query build = Query.builder().sorting(sorting)
                     .maxSalary(maxSalary)
                     .minSalary(minSalary)
+                    .desc(desc)
                     .build();
             userService.pageQuery(page, build);
             List<AccountUser> list = page.getRecords();
@@ -105,6 +108,7 @@ public class UserController {
         if (null != uservo) {
             AccountUser user = new AccountUser();
             BeanUtils.copyProperties(uservo, user);
+            user.setId(id);
             if (userService.update(user)) {
                 return ResponseEntity.status(200).body(MsgResult.success(MesgConst.SUCCESS_UPDATED));
             }

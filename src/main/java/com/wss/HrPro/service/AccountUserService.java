@@ -10,12 +10,17 @@ import java.util.List;
 public interface AccountUserService extends IService<AccountUser> {
 
     boolean validateAccId(List<AccountUser> list);
+
     boolean uploadUser(List<AccountUser> list);
+
     boolean validateAccLogin(List<AccountUser> list);
+
     boolean saveAcc(AccountUser user);
+
     boolean update(AccountUser user);
+
     boolean validateAcc(AccountUser user);
 
-     void pageQuery(Page<AccountUser> pageParam, Query qq);
+    void pageQuery(Page<AccountUser> pageParam, Query qq);
 
 }

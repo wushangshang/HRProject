@@ -51,7 +51,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/users?minSalary=0&maxSalary=1000000&offset=1&limit=200",
+					"raw": "http://localhost:8080/users?minSalary=0&maxSalary=1000000&offset=1&limit=200&sorting=id",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -79,7 +79,11 @@
 						},
 						{
 							"key": "sorting",
-							"value": "id",
+							"value": "id"
+						},
+						{
+							"key": "desc",
+							"value": "2",
 							"disabled": true
 						}
 					]
@@ -124,7 +128,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": \"e0091\",\n    \"name\": \"Harry Potter\",\n    \"login\": \"rwesley888\",\n    \"salary\": 0,\n    \"startDate\": \"2051-1-6\"\n}",
+					"raw": "{\n    \"id\": \"54fdf\",\n    \"name\": \"Harry Potter\",\n    \"login\": \"fdcvegr3\",\n    \"salary\": \"777\",\n    \"gfdgrt\": \"7-Nov-01\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -152,7 +156,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": \"e0091\",\n    \"name\": \"Harry Potter\",\n    \"login\": \"rwesley888\",\n    \"salary\": 0,\n    \"startDate\": \"2051-1-6\"\n}",
+					"raw": "{\n   \n    \"name\": \"Harry Potter\",\n    \"login\": \"wu44dfdfs55s\",\n    \"salary\": 5554.4,\n    \"startDate\": \"17-Nov-22\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

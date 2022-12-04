@@ -136,25 +136,37 @@ public class AccountUserServiceImpl extends ServiceImpl<AccountUserMapper, Accou
         String minSalary = qq.getMinSalary();
         String maxSalary = qq.getMaxSalary();
         String sorting = qq.getSorting();
+        String desc = qq.getDesc();
 
         if (StrUtil.isNotEmpty(sorting)) {
-            if (sorting.equalsIgnoreCase("startDate")){
-                sorting="start_date";
+            if (sorting.equalsIgnoreCase("startDate")) {
+                sorting = "start_date";
             }
-            queryWrapper.orderByAsc(sorting);
-        }else {
-            queryWrapper.orderByAsc("id");
+            if (StrUtil.isNotEmpty(desc)) {
+                queryWrapper.orderByDesc(sorting);
+            } else {
+                queryWrapper.orderByAsc(sorting);
+            }
+
+        } else {
+            if (StrUtil.isNotEmpty(desc)) {
+                queryWrapper.orderByDesc("id");
+            } else {
+                queryWrapper.orderByAsc("id");
+            }
+
         }
         if (StrUtil.isNotEmpty(minSalary)) {
             queryWrapper.ge("salary", minSalary);
-        }else {
+        } else {
             queryWrapper.ge("salary", 0);
         }
         if (StrUtil.isNotEmpty(maxSalary)) {
             queryWrapper.lt("salary", maxSalary);
-        }else {
+        } else {
             queryWrapper.lt("salary", 4000);
         }
+
         baseMapper.selectPage(pageParam, queryWrapper);
     }
 
